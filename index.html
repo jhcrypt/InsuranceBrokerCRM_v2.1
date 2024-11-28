@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Broker CRM</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/components/clientProfile.css">
+    <link rel="stylesheet" href="css/components/clientList.css">
+    <link rel="stylesheet" href="css/components/documentList.css">
+    <link rel="stylesheet" href="css/components/addClientModal.css">
+    <link rel="stylesheet" href="css/components/calendar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Top Navigation -->
+        <nav class="top-nav">
+            <div class="nav-left">
+                <div class="logo">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search clients, documents, or policies...">
+                </div>
+            </div>
+            <div class="nav-right">
+                <button class="btn-calendar">
+                    <i class="far fa-calendar"></i>
+                </button>
+                <div class="user-profile">
+                    <img src="https://via.placeholder.com/32" alt="Profile" class="avatar">
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="content-wrapper">
+            <!-- Sidebar -->
+            <nav class="sidebar">
+                <ul>
+                    <li><a href="#dashboard"><i class="fas fa-chart-line"></i> Dashboard</a></li>
+                    <li><a href="#clients"><i class="fas fa-users"></i> Clients</a></li>
+                    <li><a href="#documents"><i class="fas fa-file-alt"></i> Documents</a></li>
+                    <li><a href="#policies"><i class="fas fa-file-contract"></i> Policies</a></li>
+                    <li><a href="#quotes"><i class="fas fa-file-invoice-dollar"></i> Quotes</a></li>
+                    <li><a href="#calendar"><i class="fas fa-calendar"></i> Calendar</a></li>
+                    <li><a href="#tasks"><i class="fas fa-tasks"></i> Tasks</a></li>
+                    <li><a href="#reports"><i class="fas fa-chart-bar"></i> Reports</a></li>
+                    <li><a href="#settings"><i class="fas fa-cog"></i> Settings</a></li>
+                </ul>
+            </nav>
+
+            <!-- Main Content Area -->
+            <main class="main-content">
+                <!-- Dashboard Section -->
+                <section id="dashboard" class="section">
+                    <!-- ... (dashboard content remains the same) ... -->
+                </section>
+
+                <!-- Clients Section -->
+                <section id="clients" class="section hidden">
+                    <div class="client-list">
+                        <div class="list-header">
+                            <h2>Client Management</h2>
+                            <button class="btn-add-client">
+                                <i class="fas fa-plus"></i>
+                                Add Client
+                            </button>
+                        </div>
+                        <div class="list-filters">
+                            <div class="filter-group">
+                                <select class="filter-select">
+                                    <option value="">All Status</option>
+                                    <option value="active">Active</option>
+                                    <option value="prospect">Prospect</option>
+                                    <option value="inactive">Inactive</option>
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <select class="filter-select">
+                                    <option value="">All Categories</option>
+                                    <option value="individual">Individual</option>
+                                    <option value="business">Business</option>
+                                    <option value="family">Family</option>
+                                </select>
+                            </div>
+                            <div class="search-group">
+                                <input type="text" class="search-input" placeholder="Search clients...">
+                            </div>
+                        </div>
+                        <div id="clientListView"></div>
+                    </div>
+                </section>
+
+                <!-- Documents Section -->
+                <section id="documents" class="section hidden">
+                    <div id="documentListView"></div>
+                </section>
+
+                <!-- Calendar Section -->
+                <section id="calendar" class="section hidden">
+                    <div class="calendar-container">
+                        <header class="calendar-header">
+                            <h2>Calendar</h2>
+                            <button class="btn-add-event" id="addEventBtn">
+                                <i class="fas fa-plus"></i> Add Event
+                            </button>
+                        </header>
+                        
+                        <div class="calendar-navigation">
+                            <button class="btn-icon" id="prevMonth">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <h3></h3>
+                            <button class="btn-icon" id="nextMonth">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+
+                        <div class="calendar-grid">
+                            <div class="calendar-days">
+                                <span>Sun</span>
+                                <span>Mon</span>
+                                <span>Tue</span>
+                                <span>Wed</span>
+                                <span>Thu</span>
+                                <span>Fri</span>
+                                <span>Sat</span>
+                            </div>
+                            <div class="calendar-dates" id="calendarDates"></div>
+                        </div>
+
+                        <div class="events-list">
+                            <h3>Events</h3>
+                            <div id="eventsList"></div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <!-- Load dependencies first -->
+    <script src="js/clientManager.js"></script>
+    <script src="js/documentManager.js"></script>
+
+    <!-- Load components -->
+    <script src="js/components/addClientModal.js"></script>
+    <script src="js/components/clientProfile.js"></script>
+    <script src="js/components/clientList.js"></script>
+    <script src="js/components/documentList.js"></script>
+    <script src="js/components/calendar.js"></script>
+
+    <!-- Load main script last -->
+    <script src="js/script.js"></script>
+</body>
+</html>

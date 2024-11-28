@@ -1,0 +1,90 @@
+# Available Commands
+
+Project Commands:
+#init-git            - Initialize git repository if not already set up
+#init-project        - Initialize new git repository and SDLC documentation
+  └─ Executes: init-git → initial-doc → setup-product → setup-ux → setup-dev
+#restart-project     - Reset project to initial git version
+#restore-last-working - Restore from last working git version
+
+Documentation Commands:
+#initial-doc         - Generate core SDLC documentation
+  └─ Generates: PRD → BRD → UXDD → TRD
+#update-doc          - Update project documentation
+#sdlc-init           - Initialize SDLC for new project
+
+Context Commands:
+#update-context      - Update project context files
+#sync-context        - Synchronize context across agents
+
+Product Owner Commands:
+#new-feature        - Create new feature request
+#new-epic          - Create new epic
+#new-sprint        - Initialize new sprint
+  └─ Creates: Sprint planning → Sprint backlog → Sprint goals
+#roadmap-update    - Update product roadmap
+#backlog-refine    - Refine product backlog
+#generate-metrics  - Generate product metrics report
+#stakeholder-update - Create stakeholder update report
+
+UX Designer Commands:
+#wireframe-init     - Generate wireframes from user stories
+#user-flow         - Create user flow diagram
+#design-system     - Initialize/update design system
+  └─ Setup: Colors → Typography → Components → Guidelines
+#prototype        - Create interactive prototype
+#ux-audit         - Perform UX audit
+#accessibility-check - Run accessibility evaluation
+#design-handoff    - Prepare design handoff package
+
+Developer Commands:
+#start-pair-programming - Initialize AI pair programming session
+#init-api           - Initialize API structure and OpenAPI specifications
+  └─ Setup: Endpoints → Schemas → Documentation → Testing
+#init-database      - Setup database schema, migrations, and seed data
+  └─ Creates: Schema → Migrations → Seeds → Documentation
+#init-backend       - Setup backend framework and core services
+  └─ Setup: Framework → Services → Middleware → Config
+#init-frontend      - Initialize frontend project structure
+  └─ Setup: Components → State → Routing → Styles
+#init-auth          - Setup authentication and authorization
+  └─ Config: Auth → Users → Roles → Security
+#init-testing       - Setup testing framework and initial test suites
+#init-ci           - Initialize CI/CD pipeline configuration
+#code-review       - Request code review
+#debug-help        - Get debugging assistance
+#refactor         - Get refactoring suggestions
+#optimize         - Get optimization suggestions
+#security-audit   - Run security audit
+#deploy           - Deploy to specified environment
+  └─ Stages: Build → Test → Deploy → Monitor
+
+Testing Commands:
+#test-init         - Initialize testing environment and frameworks
+  └─ Setup: Unit → Integration → E2E → Config
+#test-unit        - Run unit tests with detailed report
+#test-integration - Run integration tests
+#test-e2e        - Run end-to-end tests
+#test-api        - Run API tests
+  └─ Tests: Endpoints → Responses → Error handling
+#test-ui         - Run UI component tests
+  └─ Tests: Components → Snapshots → Visual regression
+#test-coverage   - Generate test coverage report
+#test-security   - Run security tests
+  └─ Scans: Vulnerabilities → Auth → Authorization
+#test-performance - Run performance tests
+#test-accessibility - Run accessibility tests
+  └─ Checks: WCAG → ARIA → Keyboard → Screen readers
+#test-regression   - Run regression tests
+#test-stress      - Run stress tests
+#test-load       - Run load tests
+#test-mock       - Generate test mocks and fixtures
+#test-snapshot   - Update/verify component snapshots
+#test-report     - Generate comprehensive test report
+
+Help Commands:
+#help               - Display this help message
+#help <command>     - Display detailed help for specific command
+
+Use #help <command> for detailed information about a specific command
+Example: #help init-project
